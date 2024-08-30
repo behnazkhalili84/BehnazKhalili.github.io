@@ -399,13 +399,16 @@ article .icon {
 .project-img {
   border-radius: 2rem;
   width: 100%;
-  height: auto; /* Set consistent height for images */
-  object-fit: cover;
+  height: auto;
+  max-height: 400px; /* Set consistent height for images */
+  object-fit: contain;
 }
 
 .project3-img {
   border-radius: 2rem;
   height: 400px; 
+  object-fit: cover;
+  max-width: 400px;
   
 }
 
