@@ -113,7 +113,7 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: 800px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -382,21 +382,37 @@ article .icon {
   position: relative;
 }
 
+.project-containers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 200px;
-  height: 400px; 
+  width: 100%;
+  height: auto; /* Set consistent height for images */
+  object-fit: cover;
 }
 
 .project3-img {
   border-radius: 2rem;
-  width: 600px;
   height: 400px; 
+  
+}
+
+@media (max-width: 768px) {
+  .project-img, .project3-img {
+    height: 150px; /* Adjust height for smaller screens */
+  }
 }
 
 .project-title {

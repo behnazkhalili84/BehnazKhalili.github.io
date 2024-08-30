@@ -171,3 +171,4 @@ function changeLanguage(language) {
 document.addEventListener("DOMContentLoaded", () => {
   changeLanguage("en"); // Load English by default
 });
+
