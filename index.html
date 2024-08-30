@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav" class="bg-light">
+      <div class="logo navbar-brand">Behnaz Khalili</div>
+      <div >
+        <ul class="nav-links">
+            <li><a href="#about" data-translate="about">About</a></li>
+            <li><a href="#education" data-translate="education">Education</a></li>
+            <li><a href="#skills" data-translate="skills">Skills</a></li>
+            <li><a href="#experience" data-translate="experience">Experience</a></li>
+            <li><a href="#projects" data-translate="projects">Projects</a></li>
+            <li><a href="#contact" data-translate="contact">Contact</a></li>
+            <li>
+                <select id="language-select" onchange="changeLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Behnaz Khalili</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education" data-translate="education">Education</a></li>
+          <li><a href="#skills" data-translate="skills">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+            </select>
+        </li>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="profile" class="text-center py-5 ">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" class="img-fluid rounded-circle shadow" alt="behnaz-khalili profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1" data-translate="hello">Hello, I'm</p>
+        <h1 class="title" data-translate="fullName">Behnaz Khalili</h1>
+        <p class="section__text__p2"  data-translate="title">Full Stack & Mobile Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" data-translate="downloadCV"> Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/behnaz-khalili/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/behnazkhalili84'"
+          />
+        </div>
+      </div>
+    </section>
+
+     <!-- About Section -->
+    <section id="about">
+      <p class="section__text__p1" data-translate="knowMore">
+      <h1 class="title" data-translate="resume">Profile Summary</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+          </div>
+          <div class="text-container">
+            <p data-translate="myObj" >
+                Versatile software developer with over 9 years of experience in designing and developing software applications, with a strong focus on full-stack and mobile development. Currently pursuing further education in Mobile and Web Application Development, I possess robust skills in building modern web applications and designing cross-platform mobile applications. Passionate about creating innovative and efficient solutions, I am eager to contribute to challenging projects where I can apply my expertise in full-stack and mobile development to tackle complex technical challenges and enhance user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#skills'"
+      />
+    </section> 
+
+
+
+    <!-- Key Qualifications Section -->
+<!-- <section id="key-qualifications" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="display-5 fw-bold" data-translate="keyQualifications">Key Qualifications</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Android Development:</strong> Skilled in developing Android applications using Java and Kotlin, with a strong understanding of modern Android development practices.
+          </li>
+          <li class="list-group-item">
+            <strong>React Native:</strong> Proficient in building cross-platform mobile applications using React Native, ensuring consistent performance across both iOS and Android.
+          </li>
+          <li class="list-group-item">
+            <strong>Web Technologies:</strong> Experienced in utilizing various web technologies such as HTML, CSS, JavaScript, WordPress, and frameworks like React.js to build responsive and dynamic web applications.
+          </li>
+          <li class="list-group-item">
+            <strong>RESTful API Integration:</strong> Proficient in integrating RESTful APIs into mobile and web applications to enable smooth and efficient data communication.
+          </li>
+          <li class="list-group-item">
+            <strong>MVVM Pattern Design:</strong> Skilled in implementing the MVVM (Model-View-ViewModel) architectural pattern to enhance the maintainability and scalability of applications.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+      <section id="skills" class="bg-light py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="lead" data-translate="explore">Explore My</p>
+            <h2 class="display-5 fw-bold" data-translate="skills">Skills</h2>
+          </div>
+          <div class="row">
+            <!-- Frontend Skills -->
+            <div class="col-md-4">
+              <h3 class="fw-bold" data-translate="frontTitle">Frontend Skills</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>HTML | CSS - <span data-translate="experienced" >Experienced</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>JavaScript - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>React js - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>TypeScript - Basic</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Material UI - Basic</li>
+              </ul>
+            </div>
+            
+            <!-- Backend Skills -->
+            <div class="col-md-4">
+              <h3 class="fw-bold" data-translate="backTitle">Backend Skills</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Java - <span data-translate="experienced" >Experienced</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>PHP - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>C#  - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Python  - <span data-translate="basic" >Basic</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Node.js - <span data-translate="basic" >Basic</span></li>
+                
+              </ul>
+            </div>
+
+             <!-- Database Skills -->
+             <div class="col-md-4">
+              <h3 class="fw-bold" data-translate="databaseTitle">Database Skills</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>SQL - <span data-translate="experienced" >Experienced</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>IBM DB2 - <span data-translate="experienced" >Experienced</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Firebase - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>MongoDB - <span data-translate="intermediate" >Intermediate</span></li>
+              </ul>
+            </div>
+            </div>
+            <div class="row">
+              <!-- Mobile Skills -->
+              <div class="col-md-4">
+                <h3 class="fw-bold" data-translate="mobileTitle">Mobile Skills</h3>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>React Native - <span data-translate="experienced" >Experienced</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>MVVM Pattern Design - <span data-translate="experienced" >Experienced</span></li>
+               <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>SwiftUI - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Jetpack Compose - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>React Native - <span data-translate="intermediate" >Intermediate</span></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Flutter - <span data-translate="intermediate" >Intermediate</span></li>
+                </ul>
+              </div>
+              
+              <!-- General Skills -->
+              <div class="col-md-4">
+                <h3 class="fw-bold"data-translate="generalTitle">General Skills</h3>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Git |GitHub - <span data-translate="experienced" >Experienced</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Jira - <span data-translate="experienced" >Experienced</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Trello - <span data-translate="experienced" >Experienced</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>RESTful API  - <span data-translate="experienced" >Experienced</span></li>
+                </ul>
+              </div>
+  
+             
+               <!-- <div class="col-md-4">
+                <h3 class="fw-bold" data-translate="softSkills">Soft Skills</h3>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Communication - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Teamwork - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Problem Solving - <span data-translate="advanced" >Advanced</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Adaptability - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Time Management - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Critical Thinking - <span data-translate="advanced" >Advanced</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Emotional Intelligence - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Leadership - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Attention to Detail - <span data-translate="excellent" >Excellent</span></li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Decision-Making - <span data-translate="excellent" >Excellent</span></li>
+                </ul>
+              </div> -->
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+      </section>
+      
+   <!-- Education Section -->
+
+    <section id="education" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="lead"data-translate="explore">Explore My</p>
+          <h2 class="display-5 fw-bold" data-translate="education">Education</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="education-card p-4 rounded shadow-sm">
+              <h3 class="education-title fw-bold mb-2" data-translate="education1">Bachelor of Computer Science</h3>
+              <p class="education-institution mb-1" data-translate="eduloc1">Azad University Tehran, Iran</p>
+              <p class="education-duration text-muted"data-translate="eduTime1">September 2004-July 2008<</p>
+              <ul class="education-details list-unstyled mt-3">
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i><span data-translate="spedu1" > Specialization in Hardware Engineering </span> </li>
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i><span data-translate="graduate" >Graduated with Honors</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="education-card p-4 rounded shadow-sm">
+              <h3 class="education-title fw-bold mb-2" data-translate="education2">"Master's in Information Technology - Software Design and Development"</h3>
+              <p class="education-institution mb-1"data-translate="eduloc2">Shiraz University,Iran</p>
+              <p class="education-duration text-muted"data-translate="eduTime2">January 2012 - September 2014</p>
+              <ul class="education-details list-unstyled mt-3">
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i><span data-translate="spedu2" >Specialization in Software Engineering</span></li>
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i><span data-translate="graduate" >Graduated with Honors</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="education-card p-4 rounded shadow-sm">
+              <h3 class="education-title fw-bold mb-2"data-translate="education3">Mobile and Web Application Development</h3>
+              <p class="education-institution mb-1"data-translate="eduloc3">John Abbott College, Montreal, Canada</p>
+              <p class="education-duration text-muted"data-translate="eduTime3">October 2023 – Present</p>
+              <ul class="education-details list-unstyled mt-3">
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i><span data-translate="spedu3" >Focus on Mobile Development</span></li>
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i><span data-translate="activeMember" >Active Member of the Coding Club</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+        
+    </section>
+   
+    <section id="experience">
+      <p class="section__text__p1" data-translate="explore">Explore My</p>
+      <h1 class="title" data-translate="experience">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title" data-translate="experience4">Website Specialist</h2>
+            <p>Mehregan Library-Montreal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span data-translate="expTime4">July 2024– Present </span> </p>
+            <p data-translate="mehreganDesc">The Mehregan Library in Montreal is a cultural center serving the Iranian community and those interested in Persian culture. It offers a collection of Persian books, periodicals, and multimedia resources, along with cultural and educational programs. The library's website provides information about its resources, events, and services.</p>
+            <div class="article-container">
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc41">Developing and maintaining WordPress sites, themes and plugins</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc42">Manage and update website content, including text, images, and multimedia elements, using the WordPress CMS</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc43">Optimize website performance by implementing best practices for site speed, SEO, and user experience. </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+      </div>
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title" data-translate="experience3">Software Designer and Developer</h2>
+            <p>Behsazan Mellat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span data-translate="expTime3"> December 2014 – October 2023</span></p>
+            <p data-translate="behsazanDesc">Behsazan Mellat is a prominent Iranian company specializing in software development for the banking and financial sectors. It provides innovative solutions like core banking systems, payment platforms, and CRM tools, utilizing advanced technologies such as Java, Spring, and IBM DB2. Known for enhancing digital banking experiences, Behsazan Mellat plays a key role in modernizing Iran’s banking industry.</p>
+            <div class="article-container">
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc31">Analyzed requirements and designed, developed and implemented software applications in Core Banking Project using java and Spring</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc32">Assist in designing, coding, and maintaining mobile applications using Java</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc33">Strong experience in working with relational databases and mastery of SQL language, including writing SQL procedures in IBM DB2. </p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDes34">Utilized Gradle and Maven as build tools to automate and manage project dependencies and build processes. </p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc35">Collaborated using JIRA and Trello for project management, tracking progress, and coordinating with team members.</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc36">Managed version control using Git, GitHub, and Bitbucket to maintain code integrity.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+        </div>
+        <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="experience2">Quality Assurance Specialist</h2>
+              <p>Yaas Arghavani Industrial Engineering &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span data-translate="expTime2">August 2012 – December 2014 </span></p>
+              <p data-translate="yaasDesc">Yaas Arghavani Industrial Engineering is an Iranian company that provides engineering solutions, project management, and quality assurance services across various industries. The company focuses on optimizing industrial processes, ensuring high-quality standards, and enhancing operational efficiency for its clients through innovative engineering practices and collaborative project execution.</p>
+              <div class="article-container">
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc21">Develop and execute test plans to validate software functionality and performance against requirements.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc22">Identify, document, and track defects, collaborating with developers to resolve issues.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDes23">Experience with iterative web development and test-driven development </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            
+        </div>
+        <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="experience1">Technical Support Specialist</h2>
+              <p>Mellat Bank &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span data-translate="expTime1">September 2004 - July 2008 </span> </p>
+              <p data-translate="mehllatDesc">Mellat Bank is one of Iran's largest private banks, offering a comprehensive range of financial services, including retail, corporate, and investment banking. Established to support economic growth, Mellat Bank is known for its extensive network of branches, innovative digital banking solutions, and a strong commitment to customer service, making it a key player in Iran’s financial sector.</p>
+             
+              <div class="article-container">
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc11">Provided production support, debugging, and database management.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc12">Participated in the improvement and automation of internal processes and development tools.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDes13">Collaborated with a team of software developers, architects, analysts, and quality assurance specialists.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+      
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <section>
+        
+    </section>
+    
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="project-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">NutriScan APP</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/behnazkhalili84/2024-IOS-NutritionApp'"
+              >
+                Github
+              </button>
+            
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">LittleLingo APP</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/behnazkhalili84/LittleLingo'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Foodi.png"
+                alt="Project 3"
+                class="project3-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">FOODI FOODI</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/behnazkhalili84/FullStackResturantWebSite'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section> 
+
+
+    <section id="contact">
+      <p class="section__text__p1" data-translate="inTouch">Get in Touch</p>
+      <h1 class="title" data-translate="contact">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:behnazkhalili84@gmail.com">behnazkhalili84@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/behnaz-khalili">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+            <img
+              src="./assets/icon-phone.svg"
+              alt="Phone icon"
+              class="icon contact-icon"
+            />
+            <p>514-452-3389</p>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <nav class="bg-light">
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about" data-translate="about">About</a></li>
+            <li><a href="#education" data-translate="education">Education</a></li>
+            <li><a href="#skills" data-translate="skills">Skills</a></li>
+            <li><a href="#experience" data-translate="experience">Experience</a></li>
+            <li><a href="#projects" data-translate="projects">Projects</a></li>
+            <li><a href="#contact" data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

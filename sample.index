@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Behnaz Khalili</div>
+      <div>
+        <ul class="nav-links">
+            <li><a href="#about" data-translate="about">About</a></li>
+            <li><a href="#education" data-translate="education">Education</a></li>
+            <li><a href="#skills" data-translate="skills">Skills</a></li>
+            <li><a href="#experience" data-translate="experience">Experience</a></li>
+            <li><a href="#projects" data-translate="projects">Projects</a></li>
+            <li><a href="#contact" data-translate="contact">Contact</a></li>
+            <li>
+                <select id="language-select" onchange="changeLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Behnaz Khalili</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education" data-translate="education">Education</a></li>
+          <li><a href="#skills" data-translate="skills">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+            </select>
+        </li>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="behnaz-khalili profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1" data-translate="hello">Hello, I'm</p>
+        <h1 class="title" data-translate="fullName">Behnaz Khalili</h1>
+        <p class="section__text__p2"  data-translate="title">Full Stack & Mobile Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" data-translate="downloadCV"> Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/behnaz-khalili/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/behnazkhalili84'"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about">
+      <p class="section__text__p1" data-translate="knowMore">
+      <h1 class="title" data-translate="objective">Objective</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <!-- <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          /> -->
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <!-- <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+            </div> -->
+          </div>
+          <div class="text-container">
+            <p data-translate="myObj" >
+                Versatile software developer with over 9 years of experience in designing and developing software applications, with a strong focus on full-stack and mobile development. Currently pursuing further education in Mobile and Web Application Development, I possess robust skills in building modern web applications and designing cross-platform mobile applications. Passionate about creating innovative and efficient solutions, I am eager to contribute to challenging projects where I can apply my expertise in full-stack and mobile development to tackle complex technical challenges and enhance user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#skills'"
+      />
+    </section>
+   
+    <section id="skills">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Development Skills</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>SASS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>TypeScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Material UI</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Soft Skills</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Node JS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Express JS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#education'"
+        />
+      </section>
+
+
+    <section id="education">
+        <p class="section__text__p1" data-translate="explore">Explore My</p>
+        <h1 class="title" data-translate="education">Education</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="education3">Mobile and Web Application Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/education-icon.svg"
+                    alt="Education icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h1  data-translate="eduloc3">John Abbott College</h1>
+                  </div>
+                </article>
+                    <div>
+                        <p data-translate="eduTime3">October 2023 – Present</p>
+                    </div>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>GPA</h3>
+                    <p>3.9</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+                <h1 class="experience-sub-title" data-translate="education2">"Master's in Information Technology - Software Design and Development"</h1>
+                <div class="article-container">
+                  <article>
+                    <img
+                      src="./assets/education-icon.svg"
+                      alt="Education icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3  data-translate="eduloc2">Shiraz University</h3>
+                    </div>
+                  </article>
+                  <div>
+                        <p data-translate="eduTime2">January 2012 - September 2014</p>
+                  </div>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Education icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>GPA</h3>
+                      <p>3.6</p>
+                    </div>
+                  </article>
+                </div>
+            </div>
+
+            <div class="details-container">
+                <h1 class="experience-sub-title" data-translate="education1">"Bachelor's in Computer Engineering – Hardware"</h1>
+                <div class="article-container">
+                  <article>
+                    <img
+                      src="./assets/education-icon.svg"
+                      alt="Education icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3  data-translate="eduloc1">Shiraz University</h3>
+                    </div>
+                  </article>
+                  <div>
+                        <p data-translate="eduTime1">September 2004-July 2008</p>
+                  </div>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Education icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>GPA</h3>
+                      <p>3.2</p>
+                    </div>
+                  </article>
+                </div>
+            </div>
+           
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1" data-translate="explore">Explore My</p>
+      <h1 class="title" data-translate="experience">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title" data-translate="experience3">Software Designer and Developer</h2>
+            <div class="article-container">
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc31">Analyzed requirements and designed, developed, and implemented software applications.</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc32">Analyzed requirements and designed, developed, and implemented software applications.</p>
+                </div>
+              </article>
+              <article >
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <p data-translate="expeDesc33">Analyzed requirements and designed, developed, and implemented software applications.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+        </div>
+        <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="experience2">Quality Assurance Specialist</h2>
+              <div class="article-container">
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc21">Develop and execute test plans to validate software functionality and performance against requirements.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc22">Identify, document, and track defects, collaborating with developers to resolve issues.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDes23">Experience with iterative web development and test-driven development </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            
+        </div>
+        <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="experience1">Technical Support Specialist</h2>
+              <div class="article-container">
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc11">Provided production support, debugging, and database management.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDesc12">Participated in the improvement and automation of internal processes and development tools.</p>
+                  </div>
+                </article>
+                <article >
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p data-translate="expeDes13">Collaborated with a team of software developers, architects, analysts, and quality assurance specialists.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+      
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section> 
+
+
+    <section id="contact">
+      <p class="section__text__p1" data-translate="inTouch">Get in Touch</p>
+      <h1 class="title" data-translate="contact">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:behnazkhalili84@gmail.com">behnazkhalili84@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/behnaz-khalili">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+            <img
+              src="./assets/icon-phone.svg"
+              alt="Phone icon"
+              class="icon contact-icon"
+            />
+            <p>514-452-3389</p>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about" data-translate="about">About</a></li>
+            <li><a href="#education" data-translate="education">Education</a></li>
+            <li><a href="#skills" data-translate="skills">Skills</a></li>
+            <li><a href="#experience" data-translate="experience">Experience</a></li>
+            <li><a href="#projects" data-translate="projects">Projects</a></li>
+            <li><a href="#contact" data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
